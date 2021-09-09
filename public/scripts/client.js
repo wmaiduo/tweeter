@@ -4,11 +4,11 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 
+$(document).ready(function() {
 
-$(document).ready(function () {
-  // Test / driver code (temporary). Eventually will get this from the server.
+  //load the existing tweeters
   $.ajax('tweets', { method: 'GET' })
-    .then(function (tweets) {
+    .then(function(tweets) {
       const createTweetElement = (tweetData) => {
         return (`
       <form>
@@ -37,35 +37,41 @@ $(document).ready(function () {
           </article>
         </form>
       `);
-      }
+      };
 
-      const renderTweets = function (tweets) {
-        for (const tweet of tweets) {
+      const renderTweets = function(tweets) {
+        for (const tweet of tweets.slice().reverse()) {
           $('#tweets-container').append(createTweetElement(tweet));
         }
-      }
+      };
 
       renderTweets(tweets);
     });
 
   //submitting the new tweet
-  $("section.new-tweet").submit(function (event) {
-    console.log($(this.childNodes));
+  $("section.new-tweet").submit(function(event) {
     event.preventDefault();
-    if ($(this.childNodes[5].childNodes[3]).val().length > 140 || $(this.childNodes[5].childNodes[3]).val() === '') {
+    const serializedNewTweet = $("#tweet-text").val().trim();
+    //check whether the tweet is abouve 140 words count or is empty
+    if (serializedNewTweet.length > 140 || serializedNewTweet === '') {
+      //give an error if it is
+      $('.error').empty();
       const error = `<div class="slider" style="display:none"><i class="fas fa-exclamation-triangle"></i>&nbsp;Invalid Input, try again!&nbsp;<i class="fas fa-exclamation-triangle"></i></div>`;
       $('.error').append(error);
       $('.error').find('.slider').slideDown('fast');
     } else {
-      const serializedNewTweet = $("#tweet-text").val();
+      $('.error').empty();
+      //change the message into text in order to prevent XSS
       let div = document.createElement("div");
       div.appendChild(document.createTextNode(serializedNewTweet));
       const safeHTML = `<p>${div.innerHTML}</p>`;
-      console.log(safeHTML);
+      //post the message into server
+      $('#tweet-text').val('');
       $.post('tweets', { text: safeHTML })
-        .done(function () {
+        //when done, load the message from the server to the webpage
+        .done(function() {
           $.ajax('tweets', { method: 'GET' })
-            .then(function (tweets) {
+            .then(function(tweets) {
               const createTweetElement = (tweetData) => {
                 return (`
       <form>
@@ -94,15 +100,17 @@ $(document).ready(function () {
           </article>
         </form>
       `);
-              }
+              };
 
-              const renderTweets = function (tweets) {
-                console.log(tweets.length);
-                $('#tweets-container').append(createTweetElement(tweets[tweets.length - 1]));
-              }
+              const renderTweets = function(tweets) {
+                $('#tweets-container').empty();
+                for (const tweet of tweets.slice().reverse()) {
+                  $('#tweets-container').append(createTweetElement(tweet));
+                }
+              };
 
               renderTweets(tweets);
-            })
+            });
         });
     }
   });

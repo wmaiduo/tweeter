@@ -8,6 +8,7 @@
 }
 
 .slider {
+  min-width: 300px;
   display: flex;
   border: 2px red solid;
   padding-top: 0.2em;

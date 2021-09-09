@@ -3,7 +3,7 @@
     background-color: #FDD2BF;
     display: flex;
     flex-direction: column;
-    margin: auto;
+    margin-right: 1em;
     margin-top: 1em;
     margin-bottom: 1em;
     border: 0 0 0 0;
@@ -65,5 +65,6 @@
   }
   i:hover {
     color: #AFD275;
+    box-shadow: 2px -2px #AFD275;
   }
   /* article.tweet-content footer div.lower-content div.fas-fa */
