@@ -67,6 +67,7 @@ $(document).ready(function() {
       const safeHTML = `<p>${div.innerHTML}</p>`;
       //post the message into server
       $('#tweet-text').val('');
+      $('output.counter').val('140');
       $.post('tweets', { text: safeHTML })
         //when done, load the message from the server to the webpage
         .done(function() {
