@@ -50,8 +50,9 @@ $(document).ready(function () {
 
   //submitting the new tweet
   $("section.new-tweet").submit(function (event) {
+    console.log($(this.childNodes));
     event.preventDefault();
-    if ($(this.childNodes[1].childNodes[3]).val().length > 140 || $(this.childNodes[1].childNodes[3]).val() === '') {
+    if ($(this.childNodes[5].childNodes[3]).val().length > 140 || $(this.childNodes[5].childNodes[3]).val() === '') {
       const error = `<div class="slider" style="display:none"><i class="fas fa-exclamation-triangle"></i>&nbsp;Invalid Input, try again!&nbsp;<i class="fas fa-exclamation-triangle"></i></div>`;
       $('.error').append(error);
       $('.error').find('.slider').slideDown('fast');

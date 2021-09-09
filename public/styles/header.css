@@ -1,25 +1,57 @@
-header#page-start {
-  margin-top: 120px;
-  display:flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  z-index: 2;
-  height: 400px;
-  width: 100%;
-  background-color: #B97A95;
-  background-image: url("https://www.transparenttextures.com/patterns/absurdity.png");
+@media only screen and (max-width: 1024px) {
+  header#page-start {
+    margin-top: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 2;
+    height: 400px;
+    width: 100%;
+    background-color: #B97A95;
+    background-image: url("https://www.transparenttextures.com/patterns/absurdity.png");
+  }
+  header#page-start img {
+    height: 10em;
+    width: auto;
+    margin: 0;
+  }
+  header#page-start h2 {
+    margin: 0;
+    flex-grow: 0.5;
+    color: white;
+    font-family: sans-serif;
+  }
 }
 
-header#page-start img {
-  height: 10em;
-  width: auto;
-  margin: 0;
-}
+@media only screen and (min-width: 1025px) {
+  div.content {
+    display: flex;
+    margin-top: 120px;
+  }
 
-header#page-start h2 {
-  margin: 0;
-  flex-grow: 0.5;
-  color: white;
-  font-family: sans-serif;
+  header#page-start {
+    margin: 2em 2em 2em 2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 400px;
+    width: 100%;
+    background-color: #B97A95;
+    background-image: url("https://www.transparenttextures.com/patterns/absurdity.png");
+    flex-grow: 0.5;
+    max-width: 450px;
+  }
+  header#page-start img {
+    height: 10em;
+    width: auto;
+    margin: 0;
+  }
+  header#page-start h2 {
+    margin: 0;
+    flex-grow: 0.5;
+    color: white;
+    font-family: sans-serif;
+  }
 }
