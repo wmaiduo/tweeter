@@ -8,22 +8,22 @@ $(document).ready(function () {
       $(this.parentNode.childNodes[5].childNodes[3]).css("color", "black");
     }
   });
-  $("i").hover(
-    function () {
-      console.log(this);
-      $(this).css("color", "red");
-    }, function () {
-      $(this).css("color", "black");
-    }
-  );
-  $("article.tweet-content footer div.lower-content div.fas-fa i.fa-retweet").hover(
+
+  $("i.fa-flag").hover(
     function () {
       $(this).css("color", "#AFD275");
     }, function () {
       $(this).css("color", "black");
     }
   );
-  $("article.tweet-content footer div.lower-content div.fas-fa i.fa-heart").hover(
+  $("i.fa-retweet").hover(
+    function () {
+      $(this).css("color", "#AFD275");
+    }, function () {
+      $(this).css("color", "black");
+    }
+  );
+  $("i.fa-heart").hover(
     function () {
       $(this).css("color", "#AFD275");
     }, function () {
