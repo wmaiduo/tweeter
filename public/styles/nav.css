@@ -23,11 +23,8 @@ nav span.write-new-tweet {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-}
-
-nav div.write-new-tweet p {
   font-family: "Roboto", sans-serif;
-  font-size: 0.6em;
+  font-size: 0.85em;
 }
 
 nav div.write-new-tweet i {

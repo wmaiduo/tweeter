@@ -5,30 +5,8 @@ $(document).ready(function () {
     if (charLeft < 0) {
       $(this.parentNode.childNodes[5].childNodes[3]).css("color", "red");
     } else {
-      $(this.parentNode.childNodes[5].childNodes[3]).css("color", "black");
+      $(this.parentNode.childNodes[5].childNodes[3]).css("color", "white");
     }
   });
-
-  $("i.fa-flag").hover(
-    function () {
-      $(this).css("color", "#AFD275");
-    }, function () {
-      $(this).css("color", "black");
-    }
-  );
-  $("i.fa-retweet").hover(
-    function () {
-      $(this).css("color", "#AFD275");
-    }, function () {
-      $(this).css("color", "black");
-    }
-  );
-  $("i.fa-heart").hover(
-    function () {
-      $(this).css("color", "#AFD275");
-    }, function () {
-      $(this).css("color", "black");
-    }
-  );
 });
 

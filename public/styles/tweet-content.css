@@ -1,4 +1,5 @@
 article.tweet-content {
+  background-color: #FDD2BF;
   display: flex;
   flex-direction: column;
   border: 3px solid black;
@@ -69,6 +70,10 @@ article.tweet-content footer div.lower-content {
 article.tweet-content footer div.lower-content p.date {
   margin: 0.1em 1em 0.3em 0;
   font-size: 0.75em;
+}
+
+i:hover {
+  color: #AFD275;
 }
 
 /* article.tweet-content footer div.lower-content div.fas-fa */
