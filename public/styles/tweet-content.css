@@ -1,0 +1,74 @@
+article.tweet-content {
+  display: flex;
+  flex-direction: column;
+  border: 3px solid black;
+  margin: auto;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  border: 0 0 0 0;
+  padding: 0 0 0 0;
+  font-family: "roboto", sans-serif;
+  max-width: 800px;
+}
+
+article.tweet-content header {
+  padding: 0.5em;
+  border: 0em;
+  margin: 0em;
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.8em;
+  flex-grow: 0.5;
+}
+
+article.tweet-content header div.user {
+  display: flex;
+}
+
+article.tweet-content header div.user img {
+  width: 2.5em;
+  height: 2.5em;
+  margin-right: 0.5em;
+}
+
+article.tweet-content h1 {
+  font-size: 0.8em;
+  display: flex;
+  justify-content: flex-start;
+  padding-left: 1em;
+  padding-bottom: 0em;
+  flex-grow: 2;
+}
+
+article.tweet-content footer {
+  padding-top: 0em;
+  margin-top: 0em;
+  border-top: 0em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+article.tweet-content footer hr {
+  display: flex;
+  border: 0;
+  border-top: 3px solid black;
+  margin: auto;
+  padding: 0;
+  width: 98%;
+}
+
+article.tweet-content footer div.lower-content {
+  display: flex;
+  justify-content: space-between;
+  margin: 0.1em 1em 0.3em 1em;
+  font-size: 0.7em;
+  color: black;
+}
+
+article.tweet-content footer div.lower-content p.date {
+  margin: 0.1em 1em 0.3em 0;
+  font-size: 0.75em;
+}
+
+/* article.tweet-content footer div.lower-content div.fas-fa */

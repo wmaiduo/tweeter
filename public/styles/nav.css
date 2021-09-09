@@ -1,0 +1,39 @@
+nav {
+  z-index: 1;
+  display: flex;
+  height: 120px;
+  width: 100%;
+  background-color: #4056A1;
+  color: #FFFFFF;
+  justify-content: space-between;
+  position: fixed; /* Set the navbar to fixed position */
+  top: 0; /* Position the navbar at the top of the page */
+}
+
+nav span.go-to-home {
+  font-family: "Bungee", sans-serif;
+  font-size: 1.2em;
+  margin: 1.5em 1.5em 1.5em 1.5em;
+}
+
+nav span.write-new-tweet {
+  display: flex;
+  padding: 0 0 0 0;
+  margin: 1.5em 1.5em 1.5em 1.5em;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+nav div.write-new-tweet p {
+  font-family: "Roboto", sans-serif;
+  font-size: 0.6em;
+}
+
+nav div.write-new-tweet i {
+  font-size: 0.6em;
+}
+
+nav span.write-new-tweet i {
+  color: red;
+}
